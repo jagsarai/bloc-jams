@@ -62,3 +62,14 @@ body.landing{
     padding: 2rem;
     text-align: center;
 }
+
+.point .point-title{
+    font-size: 1.25rem;
+}
+
+.ion-music-note, 
+.ion-radio-waves,
+.ion-iphone{
+    color: rgb(233,0,117);
+    font-size: 5rem;
+}
