@@ -15,10 +15,6 @@ body{
     min-height: 100%;
 }
 
-.container{
-    margin: 0 auto;
-    max-width: 64rem;
-}
 
 .navbar{
     position: relative;
@@ -63,6 +59,14 @@ body{
     color: rgb(233,50,117);
 }
 
+.container{
+    margin: 0 auto;
+    max-width: 64rem;
+}
+
+.container.narrow{
+    max-width: 56rem;
+}
 /*Medium and small screeens (640px) */
 @media(min-width: 640px){
     html{ font-size: 112%; }
