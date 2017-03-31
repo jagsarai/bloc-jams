@@ -15,10 +15,6 @@ body{
     min-height: 100%;
 }
 
-.container{
-    margin: 0 auto;
-    max-width: 64rem;
-}
 
 .navbar{
     position: relative;
@@ -61,6 +57,15 @@ body{
 
 .links-container .navbar-link:hover {
     color: rgb(233,50,117);
+}
+
+.links-container .navbar-link:active{
+    background-color: white;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 64rem;
 }
 
 /*Medium and small screeens (640px) */
