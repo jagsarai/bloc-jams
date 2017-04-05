@@ -76,19 +76,16 @@ var setCurrentAlbum = function(album){
 };
 
 window.onload = function(){
-    setCurrentAlbum(albumMarconi);
+    setCurrentAlbum(albumPicasso);
+
+    var albumsList = [albumPicasso, albumMarconi, albumNarcos];
+    var index = 1;
+
+    albumImage.addEventListener("click", function(event){
+        setCurrentAlbum(albumsList[index]);
+        index ++;
+        if(index == albumsList.length){
+        index = 0;
+        }
+    });
 };
-
-
-document.getElementsByClassName("album-cover-art")[0].addEventListener("click", function(){
-
-    if(albumTitle.firstChild.nodeValue == albumPicasso.title){
-        setCurrentAlbum(albumMarconi);
-    }
-    else if(albumTitle.firstChild.nodeValue == albumMarconi.title){
-        setCurrentAlbum(albumNarcos);
-    }
-    else if(albumTitle.firstChild.nodeValue == albumNarcos.title){
-        setCurrentAlbum(albumPicasso);
-    }
-});
