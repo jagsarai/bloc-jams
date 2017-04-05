@@ -28,6 +28,21 @@ var albumMarconi = {
     ]
 };
 
+var albumNarcos = {
+    title: 'Pablo Escobar',
+    artist: 'Pablo Escobar',
+    label: 'Narcos Productions',
+    year: '2017',
+    albumArtUrl: 'assets/images/album_covers/03.png',
+    songs:[
+        {title: 'The high', duration: '1:01'},
+        {title: 'White heaven', duration: '5:01'},
+        {title: 'Powder king', duration: '3:21'},
+        {title: 'What', duration: '3:14'},
+        {title: 'Wrong number', duration: '2:15'}
+    ]
+};
+
 var createSongRow= function(songNumber, songName, songLength){
     var template = 
         '<tr class="album-view-song-item">'
@@ -40,14 +55,13 @@ var createSongRow= function(songNumber, songName, songLength){
     return template;
 }
 
+var albumTitle = document.getElementsByClassName('album-view-title')[0];
+var albumArtist = document.getElementsByClassName('album-view-artist')[0];
+var albumRelaseInfo = document.getElementsByClassName('album-view-release-info')[0];
+var albumImage = document.getElementsByClassName('album-cover-art')[0];
+var albumSongList = document.getElementsByClassName('album-view-song-list')[0];
 
 var setCurrentAlbum = function(album){
-    
-    var albumTitle = document.getElementsByClassName('album-view-title')[0];
-    var albumArtist = document.getElementsByClassName('album-view-artist')[0];
-    var albumRelaseInfo = document.getElementsByClassName('album-view-release-info')[0];
-    var albumImage = document.getElementsByClassName('album-cover-art')[0];
-    var albumSongList = document.getElementsByClassName('album-view-song-list')[0];
     
     albumTitle.firstChild.nodeValue = album.title;
     albumArtist.firstChild.nodeValue = album.artist;
@@ -62,5 +76,19 @@ var setCurrentAlbum = function(album){
 };
 
 window.onload = function(){
-    setCurrentAlbum(albumPicasso);
+    setCurrentAlbum(albumMarconi);
 };
+
+
+document.getElementsByClassName("album-cover-art")[0].addEventListener("click", function(){
+
+    if(albumTitle.firstChild.nodeValue == albumPicasso.title){
+        setCurrentAlbum(albumMarconi);
+    }
+    else if(albumTitle.firstChild.nodeValue == albumMarconi.title){
+        setCurrentAlbum(albumNarcos);
+    }
+    else if(albumTitle.firstChild.nodeValue == albumNarcos.title){
+        setCurrentAlbum(albumPicasso);
+    }
+});
