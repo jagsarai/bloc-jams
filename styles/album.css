@@ -79,6 +79,11 @@ body.album{
     line-height: 28px;
 }
 
+.album-item-number{
+    width: 5%;
+    min-width: 30px;
+}
+
 @media (max-width: 640px) and (min-width: 320px){
     .album-view-details {
         text-align: center;
