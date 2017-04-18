@@ -115,9 +115,18 @@
     margin-top: -0.25rem;
     border-radius: 50%;
     cursor: pointer;
-    -webkit-transition: all 100ms ease-in-out;
-       -moz-transition: all 100ms ease-in-out;
-            transition: all 100ms ease-in-out;
+    -webkit-transition: width 100ms ease-in-out,
+                        height 100ms ease-in-out,
+                        margin-top 100ms ease-in-out,
+                        margin-left 100ms ease-in-out;
+       -moz-transition: width 100ms ease-in-out,
+                        height 100ms ease-in-out,
+                        margin-top 100ms ease-in-out,
+                        margin-left 100ms ease-in-out;
+            transition: width 100ms ease-in-out,
+                        height 100ms ease-in-out,
+                        margin-top 100ms ease-in-out,
+                        margin-left 100ms ease-in-out;
 }
 
 .seek-bar:hover .thumb{
@@ -146,8 +155,9 @@
 
 @media (max-width: 640px) {
     .player-bar {
-        padding: 1rem;
-        background-color: rgba(0,0,0,0.6);
+        paddingwidth rem;
+        backgr
+                            height 100ms ease-in-out;ound-color: rgba(0,0,0,0.6);
     }
  
     .player-bar .main-controls,
