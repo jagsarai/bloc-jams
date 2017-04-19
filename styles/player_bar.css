@@ -83,6 +83,12 @@
     font-size: 0.8rem;
 }
 
+.seek-control .current-time{
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+}
+
 .seek-control .total-time{
     position: absolute;
     right: 0;
